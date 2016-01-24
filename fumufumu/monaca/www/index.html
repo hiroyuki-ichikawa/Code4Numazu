@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+    <script src="plugins/plugin-loader.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="plugins/plugin-loader.css">
+    
+    <style>
+        html, body{
+            height:  100%;
+            width:   100%;
+            margin:  0;
+            padding: 0;
+        }
+        
+        #ymapDiv{
+            height:  95%;
+            width:   100%;  
+        }    
+
+        #playb{
+            visibility: hidden;
+        }
+    </style>
+
+    <script type="text/javascript"
+            charset="utf-8"
+            src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=（アプリケーションID）">
+    </script>
+
+    <script type="text/javascript" src="fumufumu.js"></script>
+    
+</head>
+
+<body onload="init()">
+    <div id="output"></div>
+    <div id="ymapDiv"></div>
+    <input type="button" id="gpsb" value="GPS ON" onClick="GpsOnClick()">
+    <input type="button" id="gpsb" value="沼津駅移動" onClick="NumazuOnClick()">
+    <input type="button" id="playb" value="音声再生" onClick="playOnClick()">
+
+</body>
+</html>
